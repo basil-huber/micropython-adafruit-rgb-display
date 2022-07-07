@@ -86,8 +86,8 @@ display.pixel(32, 32, 0)
         else:
             self.dc(0)
         self.cs(0)
-        if command is not None:
+        if command:
             self.spi.write(bytearray([command]))
-        if data is not None:
+        if data:
             self.spi.write(data)
         self.cs(1)
